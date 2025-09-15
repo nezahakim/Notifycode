@@ -11,9 +11,7 @@
 		Heart,
 		Zap,
 		ArrowRight,
-
 		CheckCircle
-
 	} from '@lucide/svelte';
 
 	let isVisible = false;
