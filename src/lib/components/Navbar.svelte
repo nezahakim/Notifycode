@@ -305,7 +305,7 @@
         </button>
 
         <!-- Theme Toggle -->
-        <button 
+        <!-- <button 
           onclick={toggleDarkMode}
           class="p-2 text-gray-700 dark:text-gray-300 hover:text-green-600 hover:bg-gray-100/80 dark:hover:bg-gray-800/80 rounded-lg transition-all duration-200"
           aria-label="Toggle dark mode"
@@ -315,7 +315,7 @@
           {:else}
             <Moon />
           {/if}
-        </button>
+        </button> -->
 
         <!-- Language & User -->
         <div class="flex items-center space-x-2">
@@ -330,7 +330,7 @@
 
       <!-- Enhanced Mobile Menu Button -->
       <div class="md:hidden flex items-center space-x-2">
-        <button 
+        <!-- <button 
           onclick={toggleDarkMode}
           class="p-2 text-gray-700 dark:text-gray-300 hover:text-green-600 rounded-lg transition-all duration-200"
           aria-label="Toggle dark mode"
@@ -344,7 +344,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
             </svg>
           {/if}
-        </button>
+        </button> -->
         
         <button 
           aria-label="Toggle Menu" 
