@@ -232,7 +232,7 @@
                         {#each section.items as item}
                           <li>
                             <a 
-                              href="#" 
+                              href={item.href} 
                               class="group flex items-start space-x-3 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-200 hover:scale-[1.02]"
                               role="menuitem"
                             >
@@ -412,7 +412,7 @@
                 <ul class="space-y-2">
                   {#each section.items as item}
                     <li>
-                      <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100/80 dark:hover:bg-gray-800/80 transition-all duration-200 text-sm">
+                      <a href={item.href} class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100/80 dark:hover:bg-gray-800/80 transition-all duration-200 text-sm">
                         <span class="text-lg">{item.icon}</span>
                         <div>
                           <div class="font-medium text-gray-900 dark:text-gray-100">{item.name}</div>

@@ -29,9 +29,7 @@
         id="hero-title"
         class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-6"
       >
-        <span class="block text-lg font-medium text-lime-800 dark:text-lime-300 mb-2">
-          Celebrating 1 Year of Innovation!
-        </span>
+       
         <span class="bg-gradient-to-r from-green-500 to-lime-500 bg-clip-text text-transparent">
           Building the Intelligent Future
         </span>
