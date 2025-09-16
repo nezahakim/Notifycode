@@ -112,7 +112,7 @@
 
   // Enhanced navigation items
   const navItems = [
-    { id: 'about', label: 'About', href: '/#about' },
+    { id: 'about', label: 'About', href: '/about' },
     { id: 'services', label: 'Services', href: '/#services' },
     { id: 'products', label: 'Products', href: '/products' },
   ];
@@ -121,23 +121,23 @@
     services: {
       title: 'Services',
       items: [
-        { name: 'Telegram Bots', description: 'Custom bot development', icon: '🤖' },
-        { name: 'Social Media', description: 'Social platform integration', icon: '📱' },
-        { name: 'Custom AI Training', description: 'Tailored AI solutions', icon: '🧠' },
-        { name: 'Web Development', description: 'Modern web applications', icon: '🌐' },
-        { name: 'Mobile Development', description: 'iOS & Android apps', icon: '📲' },
-        { name: 'NotifyDelivery', description: 'Place it as an Order we ship it.', icon: '🚚' },
+        { name: 'Telegram Bots', description: 'Custom bot development', icon: '🤖', href:'' },
+        { name: 'Social Media', description: 'Social platform integration', icon: '📱', href:'' },
+        { name: 'Custom AI Training', description: 'Tailored AI solutions', icon: '🧠', href:'' },
+        { name: 'Web Development', description: 'Modern web applications', icon: '🌐', href:'' },
+        { name: 'Mobile Development', description: 'iOS & Android apps', icon: '📲', href:'' },
+        { name: 'NotifyDelivery', description: 'Place it as an Order we ship it.', icon: '🚚', href:'' },
       ]
     },
     community: {
       title: 'Community',
       items: [
-        { name: 'About Notifycode', description: 'Our story and mission', icon: '🏢' },
-        { name: 'Businesses', description: 'Enterprise solutions', icon: '💼' },
-        { name: 'Creators', description: 'Creator tools and resources', icon: '🎨' },
-        { name: 'Team', description: 'Meet our experts', icon: '👥' },
-        { name: 'Research', description: 'Latest innovations', icon: '🔬' },
-        { name: 'Blog', description: 'Insights and updates', icon: '📝' },
+        { name: 'About Notifycode', description: 'Our story and mission', icon: '🏢', href:'/about'},
+        // { name: 'Businesses', description: 'Enterprise solutions', icon: '💼' },
+        // { name: 'Creators', description: 'Creator tools and resources', icon: '🎨' },
+        { name: 'Team', description: 'Meet our experts', icon: '👥', href:'/team' },
+        // { name: 'Research', description: 'Latest innovations', icon: '🔬' },
+        { name: 'Blog', description: 'Insights and updates', icon: '📝', href:'https://blog.notifycode.org' },
       ]
     }
   };

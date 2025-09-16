@@ -1,7 +1,4 @@
 <script>
-	import Footer from "$lib/components/Footer.svelte";
-    import Navbar from "$lib/components/Navbar.svelte";
-    
     const products = [
       {
         id: "bots",
@@ -12,33 +9,33 @@
         link: "/products/bots",
         bg: "bg-gradient-to-br from-green-100 to-green-300 dark:from-green-900 dark:to-green-700"
       },
-      {
-        id: "ai",
-        name: "AI Model Training",
-        headline: "Custom-trained models that understand your users and data like never before.",
-        features: ["Language Models", "Classifier AI", "Chat Integrations"],
-        image: "/logo.jpg",
-        link: "/products/ai",
-        bg: "bg-gradient-to-br from-blue-100 to-blue-300 dark:from-blue-900 dark:to-blue-700"
-      },
-      {
-        id: "automation",
-        name: "Social Media Automation",
-        headline: "Grow your presence with hands-free publishing and optimization.",
-        features: ["Auto-Post", "Growth Tools", "Hashtag AI"],
-        image: "/hero.jpg",
-        link: "/products/automation",
-        bg: "bg-gradient-to-br from-purple-100 to-purple-300 dark:from-purple-900 dark:to-purple-700"
-      },
-      {
-        id: "entertainment",
-        name: "Entertainment Tools",
-        headline: "Engage users with games, quizzes, and viral digital experiences.",
-        features: ["Mini-Games", "User Analytics", "Social Sharing"],
-        image: "/favicon.png",
-        link: "/products/entertainment",
-        bg: "bg-gradient-to-br from-pink-100 to-pink-300 dark:from-pink-900 dark:to-pink-700"
-      }
+      // {
+      //   id: "ai",
+      //   name: "AI Model Training",
+      //   headline: "Custom-trained models that understand your users and data like never before.",
+      //   features: ["Language Models", "Classifier AI", "Chat Integrations"],
+      //   image: "/logo.jpg",
+      //   link: "/services/ai",
+      //   bg: "bg-gradient-to-br from-blue-100 to-blue-300 dark:from-blue-900 dark:to-blue-700"
+      // },
+      // {
+      //   id: "automation",
+      //   name: "Social Media Automation",
+      //   headline: "Grow your presence with hands-free publishing and optimization.",
+      //   features: ["Auto-Post", "Growth Tools", "Hashtag AI"],
+      //   image: "/hero.jpg",
+      //   link: "/services/automation",
+      //   bg: "bg-gradient-to-br from-purple-100 to-purple-300 dark:from-purple-900 dark:to-purple-700"
+      // },
+      // {
+      //   id: "entertainment",
+      //   name: "Entertainment Tools",
+      //   headline: "Engage users with games, quizzes, and viral digital experiences.",
+      //   features: ["Mini-Games", "User Analytics", "Social Sharing"],
+      //   image: "/favicon.png",
+      //   link: "/services/entertainment",
+      //   bg: "bg-gradient-to-br from-pink-100 to-pink-300 dark:from-pink-900 dark:to-pink-700"
+      // }
     ];
   </script>
   
