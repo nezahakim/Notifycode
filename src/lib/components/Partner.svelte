@@ -1,6 +1,6 @@
 <script>
   const partners = [
-    "Microsoft", "Google", "Amazon", "Stripe", "Shopify", "Slack"
+    "ESTG/TSS", "Google", "Amazon", "Stripe", "Shopify", "Slack"
   ];
 </script>
 

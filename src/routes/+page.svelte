@@ -13,7 +13,7 @@
       <About />
       <Services />
       <Technology />
-      <Partner />
+      <!-- <Partner /> -->
       <Testimonial />
       <Cta/>
       
