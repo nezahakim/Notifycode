@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { fly, fade } from 'svelte/transition';
   import { Globe, Moon, Search, Sun, Truck, User } from '@lucide/svelte'
+	import { authStore } from '$lib/stores/auth';
 
   let isScrolled = false;
   let scrollProgress = 0;
@@ -141,6 +142,17 @@
       ]
     }
   };
+
+  const getUser = async () =>{
+    // Fetch user data logic here
+
+    if($authStore.isAuthenticated){
+      console.log($authStore.user?.email, "Authenticated")
+    }else{
+      console.log("Not Authenticated")
+    }
+
+  }
 </script>
 
 <!-- Scroll Progress Bar -->
