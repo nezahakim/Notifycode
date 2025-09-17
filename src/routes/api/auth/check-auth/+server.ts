@@ -40,6 +40,7 @@ export const POST: RequestHandler = async ({ cookies }) => {
                     return json({ authenticated: false }, { status: 200 });
                 } 
             } else {
+                cookies.delete('nc_rt', { path: '/' });
                 return json({ authenticated: false }, { status: 200 });
             } 
             
