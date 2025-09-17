@@ -124,7 +124,9 @@ export async function refreshTokenOnLoad() {
 }
 
 export const checkAuth = async () =>{
-    const res = await fetch('/api/auth/check-auth');
+    const res = await fetch('/api/auth/check-auth'
+    , { method: 'POST', credentials: 'include' }
+    );
     const data = await res.json();
     
     if(res.ok){
