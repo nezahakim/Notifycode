@@ -130,9 +130,9 @@ export const checkAuth = async () =>{
     const data = await res.json();
     
     if(res.ok){
-        authStore.login(data.user, data.accessToken)
-    }else{
-        console.log(data)
+        if(data.authenticated && ( data.user && data.accessToken)){
+            authStore.login(data.user, data.accessToken)
+        }
     }
 }
 

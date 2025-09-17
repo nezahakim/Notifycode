@@ -1,8 +1,15 @@
 <script lang="ts">
 	import '../app.css';
 	import Logo from '$lib/assets/logo.jpg';
+	import { checkAuth } from '$lib/stores/auth';
+	import { onMount } from 'svelte';
 
 	let { children } = $props();
+	
+	onMount(async ()=>{
+		await checkAuth();
+	});
+	
 </script>
 
 <svelte:head>

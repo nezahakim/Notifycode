@@ -10,7 +10,7 @@
     let darkMode = $state(false);  
 
 	onMount(async ()=>{
-		checkAuth();
+		await checkAuth();
 	});
 
 </script>
