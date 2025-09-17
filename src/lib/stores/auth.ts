@@ -125,10 +125,12 @@ export async function refreshTokenOnLoad() {
 
 export const checkAuth = async () =>{
     const res = await fetch('/api/auth/check-auth');
+    const data = await res.json();
     
     if(res.ok){
-        const data = await res.json();
         authStore.login(data.user, data.accessToken)
+    }else{
+        console.log(data)
     }
 }
 
