@@ -50,6 +50,7 @@ export const POST: RequestHandler = async ({ cookies }) => {
             return json({ authenticated: false }, { status: 200 });
         } 
     } catch (err) { 
+        console.log(err)
         return json({ authenticated: false, error: 'Server error' }, { status: 500 });
     }
 };
