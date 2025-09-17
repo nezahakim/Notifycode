@@ -11,6 +11,7 @@ export const POST: RequestHandler = async ({ cookies }) => {
 
     try {
         const res = await fetch(`${AUTH_SERVER}/api/auth/refresh`, {
+            method: 'POST',
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -22,6 +23,7 @@ export const POST: RequestHandler = async ({ cookies }) => {
 
             if (accessToken) {
                 const res = await fetch(`${AUTH_SERVER}/api/auth/validate`, {
+                    method: 'GET',
                     headers: {
                         Authorization: `Bearer ${accessToken}`
                     }
@@ -40,7 +42,7 @@ export const POST: RequestHandler = async ({ cookies }) => {
                     return json({ authenticated: false }, { status: 200 });
                 } 
             } else {
-                cookies.delete('nc_rt', { path: '/' });
+                // cookies.delete('nc_rt', { path: '/' });
                 return json({ authenticated: false }, { status: 200 });
             } 
             
