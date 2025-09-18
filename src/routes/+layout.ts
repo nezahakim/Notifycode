@@ -1,4 +1,3 @@
-import { AUTH_SERVER } from '$lib/utils.js';
 import type { Load } from '@sveltejs/kit';
 
 

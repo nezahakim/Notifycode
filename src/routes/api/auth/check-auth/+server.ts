@@ -13,6 +13,9 @@ export const POST: RequestHandler = async ({ cookies }) => {
         const res = await fetch(`${AUTH_SERVER}/api/auth/check-auth`, {
             method: 'POST',
             credentials: 'include',
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
         });
         
             const data = await res.json();
