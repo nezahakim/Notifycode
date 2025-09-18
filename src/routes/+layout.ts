@@ -17,7 +17,8 @@ export const load: Load  = async ({ fetch }) => {
     }
 
     return {
-        user: null
+        user: null,
+        data:data
     };
 
 };
