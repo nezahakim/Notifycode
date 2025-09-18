@@ -1,4 +1,3 @@
-import { authStore } from "$lib/stores/auth";
 import { AUTH_SERVER } from "$lib/utils";
 import { json, type RequestHandler } from "@sveltejs/kit";
 
