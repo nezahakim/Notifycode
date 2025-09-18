@@ -7,7 +7,7 @@ export const POST: RequestHandler = async ({ cookies }) => {
     const token = cookies.get('nc_rt');
 
     if (!token) {
-        return json({ authenticated: false }, { status: 401 });
+        return json({ authenticated: false, code:"R10" }, { status: 401 });
     }
 
     try {
@@ -40,18 +40,17 @@ export const POST: RequestHandler = async ({ cookies }) => {
                     }, { status: 200 });
 
                 }else {
-                    return json({ authenticated: false }, { status: 200 });
+                    return json({ authenticated: false, code:"R-0" }, { status: 200 });
                 } 
             } else {
                 // cookies.delete('nc_rt', { path: '/' });
-                return json({ authenticated: false }, { status: 200 });
+                return json({ authenticated: false,code:"R-1" }, { status: 200 });
             } 
             
         } else {
-            return json({ authenticated: false }, { status: 200 });
+            return json({ authenticated: false, code:"R1" }, { status: 200 });
         } 
     } catch (err) { 
-        console.log(err)
         return json({ authenticated: false, error: 'Server error' }, { status: 500 });
     }
 };
