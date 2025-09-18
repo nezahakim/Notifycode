@@ -1,5 +1,6 @@
 import { AUTH_SERVER } from "$lib/utils";
 import { json, type RequestHandler } from "@sveltejs/kit";
+import { access } from "fs";
 
 
 export const POST: RequestHandler = async ({ cookies }) => {
@@ -23,7 +24,8 @@ export const POST: RequestHandler = async ({ cookies }) => {
             if (res.ok && data.authenticated) {
                 return json({
                     authenticated: true,
-                    user: data.user
+                    user: data.user,
+                    accessToken: data.accessToken
                 });
             }
         
