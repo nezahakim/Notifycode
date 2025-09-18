@@ -3,7 +3,7 @@ import { authStore } from "$lib/stores/auth";
 import { get } from "svelte/store";
 import type { Load } from '@sveltejs/kit';
 
-export const load: Load = async ({  }) => {
+export const load: Load = async ({ fetch }) => {
     const access_token = get(authStore).accessToken;
 
     if(!access_token){
