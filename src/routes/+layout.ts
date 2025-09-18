@@ -11,7 +11,7 @@ export const load: Load  = async ({ fetch }) => {
     const data = await res.json();
 
     if (res.ok && data.authenticated) {
-        
+
         authStore.login(data.user, data.accessToken)
 
         return {
@@ -21,7 +21,6 @@ export const load: Load  = async ({ fetch }) => {
 
     return {
         user: null,
-        data:data
     };
 
 };
