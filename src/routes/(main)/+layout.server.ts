@@ -1,4 +1,3 @@
-import { json } from "@sveltejs/kit";
 import type { LayoutServerLoad } from './$types';
 import { AUTH_SERVER } from "$lib/utils";
 import { authStore } from "$lib/stores/auth";
@@ -9,7 +8,7 @@ export const load: LayoutServerLoad = async ({ cookies }) => {
     const access_token = get(authStore).accessToken;
 
     if(!refresh_token || !access_token){
-        return json({ user: null }, { status: 401 });
+        return { user: null };
     }
 
     try{
@@ -25,13 +24,13 @@ export const load: LayoutServerLoad = async ({ cookies }) => {
         const data = await res.json();
 
         if(res.ok && data.user){
-            return json({ user: data.user });
+            return { user: data.user };
         }
 
-        return json({ user: null, message: data.message || "Could not fetch user" }, { status: res.status });
+        return { user: null, message: data.message || "Could not fetch user" };
 
     } catch(error){
-        return json({ user: null, message:"Server Error" })
+        return { user: null, message:"Server Error" };
     }
 
 };
