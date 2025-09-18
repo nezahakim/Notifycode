@@ -1,13 +1,12 @@
-import type { LayoutServerLoad } from './$types';
 import { AUTH_SERVER } from "$lib/utils";
 import { authStore } from "$lib/stores/auth";
 import { get } from "svelte/store";
+import type { Load } from '@sveltejs/kit';
 
-export const load: LayoutServerLoad = async ({ cookies }) => {
-    const refresh_token = cookies.get('nc_rt');
+export const load: Load = async ({  }) => {
     const access_token = get(authStore).accessToken;
 
-    if(!refresh_token || !access_token){
+    if(!access_token){
         return { user: null };
     }
 
