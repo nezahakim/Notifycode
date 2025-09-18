@@ -23,7 +23,8 @@ export const load: Load = async ({  }) => {
         const data = await res.json();
 
         if(res.ok && data.user){
-            return { user: data.user };
+
+            return { user: data.user, data };
         }
 
         return { user: null, message: data.message || "Could not fetch user" };
