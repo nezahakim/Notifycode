@@ -7,7 +7,7 @@ export const load: Load = async ({  }) => {
     const access_token = get(authStore).accessToken;
 
     if(!access_token){
-        return { user: null };
+        return { user: null, message: "DUND" };
     }
 
     try{
@@ -23,8 +23,8 @@ export const load: Load = async ({  }) => {
         const data = await res.json();
 
         if(res.ok && data.user){
-
-            return { user: data.user, data };
+            
+            return { user: data.user };
         }
 
         return { user: null, message: data.message || "Could not fetch user" };
