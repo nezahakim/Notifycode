@@ -6,6 +6,7 @@ export const POST: RequestHandler = async ({ cookies }) => {
     const token = cookies.get('nc_rt');
 
     if (!token) {
+        console.log("No token")
         return json({ authenticated: false }, { status: 200 });
     }
 
