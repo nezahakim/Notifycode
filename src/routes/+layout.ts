@@ -2,7 +2,7 @@ import { AUTH_SERVER } from '$lib/utils.js';
 import type { Load } from '@sveltejs/kit';
 
 
-export const load: Load = async ({ fetch }) => {
+export const load: Load  = async ({ fetch }) => {
     const res = await fetch(`${AUTH_SERVER}/api/auth/check-auth`, {
         method: 'POST',
         credentials: 'include',
@@ -19,4 +19,5 @@ export const load: Load = async ({ fetch }) => {
     return {
         user: null
     };
+
 };

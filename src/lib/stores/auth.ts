@@ -123,21 +123,6 @@ export async function refreshTokenOnLoad() {
     }
 }
 
-export const checkAuth = async () =>{
-    const res = await fetch('/api/auth/check-auth'
-    , { method: 'POST', credentials: 'include' }
-    );
-
-    const data = await res.json();
-    
-    if(res.ok){
-        if(data.authenticated && ( data.user && data.accessToken)){
-            authStore.login(data.user, data.accessToken)
-        }
-    }
-
-    console.log(data)
-}
 
 export const authStore = createAuthStore();
 export const isAuthenticated = derived(authStore, $auth => $auth.isAuthenticated);
