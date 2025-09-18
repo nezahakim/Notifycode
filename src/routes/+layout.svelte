@@ -4,7 +4,7 @@
 
 	let { children, data } = $props();
 
-	console.log(data?.user)
+	console.log(data);
 </script>
 
 <svelte:head>
