@@ -127,6 +127,7 @@ export const checkAuth = async () =>{
     const res = await fetch('/api/auth/check-auth'
     , { method: 'POST', credentials: 'include' }
     );
+
     const data = await res.json();
     
     if(res.ok){
@@ -134,6 +135,8 @@ export const checkAuth = async () =>{
             authStore.login(data.user, data.accessToken)
         }
     }
+
+    console.log(data)
 }
 
 export const authStore = createAuthStore();
