@@ -1,3 +1,4 @@
+import { authStore } from '$lib/stores/auth';
 import type { Load } from '@sveltejs/kit';
 
 
@@ -10,6 +11,9 @@ export const load: Load  = async ({ fetch }) => {
     const data = await res.json();
 
     if (res.ok && data.authenticated) {
+        
+        authStore.login(data.user, data.accessToken)
+
         return {
             user: data.user
         };
