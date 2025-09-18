@@ -1,17 +1,12 @@
 <script lang="ts">
 	import Footer from '$lib/components/Footer.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
-	import { checkAuth } from '$lib/stores/auth';
-	import { onMount } from 'svelte';
-
+	
 	let { children } = $props();
 
     let scrollY = $state(0);
     let darkMode = $state(false);  
 
-	onMount(async ()=>{
-		await checkAuth();
-	});
 
 </script>
 
