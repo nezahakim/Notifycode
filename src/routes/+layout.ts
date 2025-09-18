@@ -3,7 +3,7 @@ import type { Load } from '@sveltejs/kit';
 
 
 export const load: Load  = async ({ fetch }) => {
-    const res = await fetch(`${AUTH_SERVER}/api/auth/check-auth`, {
+    const res = await fetch(`/api/auth/check-auth`, {
         method: 'POST',
         credentials: 'include',
     });
