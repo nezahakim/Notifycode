@@ -30,7 +30,6 @@ export const POST: RequestHandler = async ({ cookies }) => {
             return json({
                 authenticated: false,
                 user: null,
-                data:data
             });        
 
         
