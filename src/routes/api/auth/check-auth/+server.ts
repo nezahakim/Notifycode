@@ -13,9 +13,7 @@ export const POST: RequestHandler = async ({ cookies }) => {
     try {
         const res = await fetch(`${AUTH_SERVER}/api/auth/refresh`, {
             method: 'POST',
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
+            credentials: 'include',
         });
 
         if (res.ok) {
