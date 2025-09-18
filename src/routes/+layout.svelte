@@ -2,9 +2,8 @@
 	import '../app.css';
 	import Logo from '$lib/assets/logo.jpg';
 
-	let { children, data } = $props();
-
-	console.log(data);
+	let { children } = $props();
+	
 </script>
 
 <svelte:head>

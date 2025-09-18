@@ -146,10 +146,11 @@
   };
 
   const getUser = async () =>{
-    // Fetch user data logic here
-
+    
     if($authStore.isAuthenticated){
+
       console.log($authStore.user?.email, "Authenticated")
+
     }else{
       console.log("Not Authenticated")
     }
