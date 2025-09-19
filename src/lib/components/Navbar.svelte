@@ -3,8 +3,7 @@
   import { fly, fade } from 'svelte/transition';
   import { Globe, Moon, Search, Sun, Truck, User } from '@lucide/svelte'
 	import { authStore } from '$lib/stores/auth';
-	import { profile_store } from '$lib/stores/profile';
-
+  
   let isScrolled = $state(false);
   let scrollProgress = $state(0);
   let mobileMenuOpen = $state(false);
@@ -149,20 +148,11 @@
   let profile = $state() as any;
 
   const getUser = async () =>{
-    
     if($authStore.isAuthenticated){
-
-      if($profile_store && $profile_store.profile !== null) {
-        profile = $profile_store.profile;
-       }
-
-    }else{
-      console.log("Not Authenticated")
+      profile = $authStore.user;
     }
-
   }
 
-  console.log(profile);
 </script>
 
 <!-- Scroll Progress Bar -->
