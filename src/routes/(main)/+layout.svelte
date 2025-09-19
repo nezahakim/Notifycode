@@ -2,6 +2,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import { get_user_profile } from '$lib/stores/auth';
+	import { profile_store } from '$lib/stores/profile';
 	import { onMount } from 'svelte';
 	
 	let { children } = $props();
@@ -11,7 +12,9 @@
 
 	onMount(async()=>{
 		const data = await get_user_profile();
-		console.log(data);
+		if(data.user && data.user !== null){
+			profile_store.set_profile(data.user);
+		}
 	})
 
 </script>
