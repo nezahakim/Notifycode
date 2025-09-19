@@ -344,15 +344,15 @@
             <Globe class="w-5 h-5"/> <span>EN</span>
           </button>
           <button class="p-2 text-gray-700 dark:text-gray-300 hover:text-green-600 hover:bg-gray-100/80 dark:hover:bg-gray-800/80 rounded-lg transition-all duration-200">
-            {#if profile.avatar_url }
+            {#if profile?.avatar_url }
               <img 
-                src={profile.avatar_url} 
+                src={profile?.avatar_url} 
                 alt="User Avatar" 
                 class="h-5 w-5 rounded-full object-cover"
               /> 
               {:else}
               <div class="h-5 w-5 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-xs font-semibold text-gray-600 dark:text-gray-300">
-                {profile && profile.email ? profile.email.slice(0,1).toUpperCase() : 'U'}
+                {profile && profile?.email ? profile?.email.slice(0,1).toUpperCase() : 'U'}
               </div>
             {/if}
             <User class="w-5 h-5" />
