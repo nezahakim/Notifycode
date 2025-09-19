@@ -335,15 +335,15 @@
           <button class="flex items-center space-x-1 p-2 text-gray-700 dark:text-gray-300 hover:text-green-600 hover:bg-gray-100/80 dark:hover:bg-gray-800/80 rounded-lg transition-all duration-200 text-sm">
             <Globe class="w-5 h-5"/> <span>EN</span>
           </button>
-            <a href="https://account.notifycode.org">
+            <a href="https://account.notifycode.org" title="Account">
               {#if profile?.avatar_url }
               <img 
                 src={profile?.avatar_url} 
                 alt="User Avatar" 
-                class="h-5 w-5 rounded-full object-cover"
+                class="p-2 h-5 w-5 rounded-full object-cover"
               /> 
               {:else if profile && profile?.email }
-              <div class="h-5 w-5 rounded-full bg-green-500 dark:bg-green-600 flex items-center justify-center text-xs font-semibold text-gray-600 dark:text-gray-300">
+              <div class="p-2 h-5 w-5 rounded-full bg-green-500 dark:bg-green-600 flex items-center justify-center text-xs font-semibold text-gray-600 dark:text-gray-300">
                 {profile && profile?.email ? profile?.email.slice(0,1).toUpperCase() : 'U'}
               </div>
             {:else}
