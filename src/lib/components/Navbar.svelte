@@ -3,7 +3,7 @@
   import { fly, fade } from 'svelte/transition';
   import { Globe, Moon, Search, Sun, Truck, User } from '@lucide/svelte'
 	import { authStore } from '$lib/stores/auth';
-  
+
   let isScrolled = $state(false);
   let scrollProgress = $state(0);
   let mobileMenuOpen = $state(false);
@@ -335,7 +335,6 @@
           <button class="flex items-center space-x-1 p-2 text-gray-700 dark:text-gray-300 hover:text-green-600 hover:bg-gray-100/80 dark:hover:bg-gray-800/80 rounded-lg transition-all duration-200 text-sm">
             <Globe class="w-5 h-5"/> <span>EN</span>
           </button>
-          <button class="p-2 text-gray-700 dark:text-gray-300 hover:text-green-600 hover:bg-gray-100/80 dark:hover:bg-gray-800/80 rounded-lg transition-all duration-200">
             {#if profile?.avatar_url }
               <img 
                 src={profile?.avatar_url} 
@@ -343,20 +342,22 @@
                 class="h-5 w-5 rounded-full object-cover"
               /> 
               {:else if profile && profile?.email }
-              <div class="h-5 w-5 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-xs font-semibold text-gray-600 dark:text-gray-300">
+              <div class="h-5 w-5 rounded-full bg-green-500 dark:bg-green-600 flex items-center justify-center text-xs font-semibold text-gray-600 dark:text-gray-300">
                 {profile && profile?.email ? profile?.email.slice(0,1).toUpperCase() : 'U'}
               </div>
             {:else}
+            <button class="p-2 text-gray-700 dark:text-gray-300 hover:text-green-600 hover:bg-gray-100/80 dark:hover:bg-gray-800/80 rounded-lg transition-all duration-200">
               <User class="w-5 h-5" />
+            </button>
             {/if}
             
-          </button>
+          
         </div>
       </div>
 
       <!-- Enhanced Mobile Menu Button -->
       <div class="md:hidden flex items-center space-x-2">
-        <!-- <button 
+        <!-- <button	
           onclick={toggleDarkMode}
           class="p-2 text-gray-700 dark:text-gray-300 hover:text-green-600 rounded-lg transition-all duration-200"
           aria-label="Toggle dark mode"
