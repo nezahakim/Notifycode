@@ -147,7 +147,7 @@ export const get_user_profile = async () =>{
                 return { user: data.user };
             }
     
-            return { user: null, message: data.message || "Could not fetch user" };
+            return { user: null, message: data || "Could not fetch user" };
     
         } catch(error){
             return { user: null, message:"Server Error" };
