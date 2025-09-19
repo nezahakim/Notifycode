@@ -14,6 +14,6 @@
       <Services />
       <Technology />
       <!-- <Partner /> -->
-      <Testimonial />
+      <!-- <Testimonial /> -->
       <Cta/>
       

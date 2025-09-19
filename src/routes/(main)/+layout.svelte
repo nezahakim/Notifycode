@@ -1,13 +1,19 @@
 <script lang="ts">
 	import Footer from '$lib/components/Footer.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
+	import { get_user_profile } from '$lib/server/validate.js';
+	import { onMount } from 'svelte';
 	
-	let { children, data } = $props();
+	let { children } = $props();
 
     let scrollY = $state(0);
     let darkMode = $state(false);  
 
-	console.log(data);
+	onMount(async()=>{
+		const data = await get_user_profile();
+		console.log(data);
+	})
+
 </script>
 
 <svelte:window bind:scrollY />

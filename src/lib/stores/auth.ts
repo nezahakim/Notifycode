@@ -65,7 +65,7 @@ function createAuthStore() {
             // Refresh token every 10 minutes (before 15-minute expiry)
             refreshInterval = setInterval(async () => {
                 try {
-                    const response = await fetch('/api/auth/refresh', {
+                    const response = await fetch(`${AUTH_SERVER}/api/auth/refresh`, {
                         method: 'POST',
                         credentials: 'include'
                     });
