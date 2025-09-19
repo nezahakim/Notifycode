@@ -161,6 +161,8 @@
     }
 
   }
+
+  console.log(profile);
 </script>
 
 <!-- Scroll Progress Bar -->
@@ -350,12 +352,14 @@
                 alt="User Avatar" 
                 class="h-5 w-5 rounded-full object-cover"
               /> 
-              {:else}
+              {:else if profile && profile?.email }
               <div class="h-5 w-5 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-xs font-semibold text-gray-600 dark:text-gray-300">
                 {profile && profile?.email ? profile?.email.slice(0,1).toUpperCase() : 'U'}
               </div>
+            {:else}
+              <User class="w-5 h-5" />
             {/if}
-            <User class="w-5 h-5" />
+            
           </button>
         </div>
       </div>
