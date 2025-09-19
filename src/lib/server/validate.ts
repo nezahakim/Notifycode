@@ -7,7 +7,7 @@ export const get_user_profile = async () =>{
         const access_token = get(authStore).accessToken;
     
         if(!access_token){
-            return { user: null, message: "DUND" };
+            return { user: null, message: "DUND-1" };
         }
     
         try{
