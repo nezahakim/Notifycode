@@ -343,7 +343,7 @@
                 class="p-2 h-5 w-5 rounded-full object-cover"
               /> 
               {:else if profile && profile?.email }
-              <div class="p-2 h-5 w-5 rounded-full bg-green-500 dark:bg-green-600 flex items-center justify-center text-xs font-semibold text-gray-600 dark:text-gray-300">
+              <div class="p-2 h-5 w-5 rounded-full bg-green-500 dark:bg-green-600 flex items-center justify-center text-xs font-bold text-gray-600 dark:text-gray-300">
                 {profile && profile?.email ? profile?.email.slice(0,1).toUpperCase() : 'U'}
               </div>
             {:else}
