@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Footer from '$lib/components/Footer.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
-	import { get_user_profile } from '$lib/server/validate.js';
+	import { get_user_profile } from '$lib/stores/auth';
 	import { onMount } from 'svelte';
 	
 	let { children } = $props();

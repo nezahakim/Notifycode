@@ -170,7 +170,6 @@
     ${isScrolled 
       ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-lg shadow-black/5' 
       : 'bg-transparent border-transparent'}`}
-  role="navigation"
   aria-label="Main navigation"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -214,6 +213,8 @@
             class="relative mega-menu-container"
             onmouseenter={() => megaMenuOpen = true}
             onmouseleave={() => megaMenuOpen = false}
+            role="menu"
+            tabindex="0"
           >
             <button 
               class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-green-600 rounded-lg transition-all duration-200 hover:bg-gray-100/80 dark:hover:bg-gray-800/80 flex items-center space-x-1"

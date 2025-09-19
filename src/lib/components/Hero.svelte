@@ -1,6 +1,4 @@
 <script>
-  // No changes needed here assuming scrollToSection is a robust function passed down.
-  // It's clean and uses modern Svelte 5 runes.
   let { scrollToSection } = $props();
 </script>
 
@@ -54,7 +52,7 @@
     <button
       type="button"
       aria-label="Scroll to About Section"
-      on:click={() => scrollToSection('about')}
+      onclick={() => scrollToSection('about')}
       class="text-gray-400 hover:text-green-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 rounded-full p-1"
     >
       <svg

@@ -25,7 +25,7 @@
     <!-- Optional: CTA -->
     <div class="mt-12 text-center">
       <p class="text-gray-500 dark:text-gray-400 text-sm">
-        Want to join these leaders? <a href="#" class="text-green-500 hover:underline font-medium">Become a partner →</a>
+        Want to join these leaders? <a href="/apply" class="text-green-500 hover:underline font-medium">Become a partner →</a>
       </p>
     </div>
   </div>

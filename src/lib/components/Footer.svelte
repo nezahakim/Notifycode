@@ -81,9 +81,9 @@
     <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
       <p>© 2025 Notifycode. All rights reserved.</p>
       <div class="flex space-x-8 mt-4 md:mt-0">
-        <a href="#" class="hover:text-green-400 transition-colors">Privacy Policy</a>
-        <a href="#" class="hover:text-green-400 transition-colors">Terms of Service</a>
-        <a href="#" class="hover:text-green-400 transition-colors">Cookie Policy</a>
+        <a href="/privacy" class="hover:text-green-400 transition-colors">Privacy Policy</a>
+        <a href="/terms" class="hover:text-green-400 transition-colors">Terms of Service</a>
+        <a href="/cookies" class="hover:text-green-400 transition-colors">Cookie Policy</a>
       </div>
     </div>
   </div>
