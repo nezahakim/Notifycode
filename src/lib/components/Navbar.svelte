@@ -335,7 +335,8 @@
           <button class="flex items-center space-x-1 p-2 text-gray-700 dark:text-gray-300 hover:text-green-600 hover:bg-gray-100/80 dark:hover:bg-gray-800/80 rounded-lg transition-all duration-200 text-sm">
             <Globe class="w-5 h-5"/> <span>EN</span>
           </button>
-            {#if profile?.avatar_url }
+            <a href="https://account.notifycode.org">
+              {#if profile?.avatar_url }
               <img 
                 src={profile?.avatar_url} 
                 alt="User Avatar" 
@@ -350,6 +351,7 @@
               <User class="w-5 h-5" />
             </button>
             {/if}
+            </a>
             
           
         </div>
