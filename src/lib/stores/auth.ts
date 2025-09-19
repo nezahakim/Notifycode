@@ -34,11 +34,6 @@ function createAuthStore() {
                 accessToken,
                 isAuthenticated: true
             });
-            
-            if (browser) {
-                // Store token in memory only (not localStorage for security)
-                this.startTokenRefresh();
-            }
         },
         
         logout() {
